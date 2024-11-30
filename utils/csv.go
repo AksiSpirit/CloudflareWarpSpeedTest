@@ -3,7 +3,6 @@ package utils
 import (
 	"encoding/csv"
 	"fmt"
-	"log"
 	"net"
 	"os"
 	"strconv"
@@ -70,7 +69,6 @@ func ExportCsv(data []CloudflareIPData) {
 	}
 	fp, err := os.Create(Output)
 	if err != nil {
-		log.Fatalf(i18n.QueryTemplateI18n(i18n.CreateFileFailed, map[string]interface{}{"Output": Output, "err": err}))
 		return
 	}
 	defer fp.Close()
