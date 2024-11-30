@@ -14,18 +14,18 @@ Inspired(Copied) by [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpee
 ### Package Manager
 #### Homebrew
 ```bash
-brew tap peanut996/tap && brew install cloudflarewarpspeedtest
+brew tap AksiSpirit/tap && brew install cloudflarewarpspeedtest
 ```
 
 #### WinGet
 ```bash
-winget install peanut996.CloudflareWarpSpeedTest
+winget install AksiSpirit.CloudflareWarpSpeedTest
 ```
 
 #### Scoop
 ```pwsh
-scoop bucket add peanut996 https://github.com/peanut996/scoop-bucket
-scoop install peanut996/cloudflarewarpspeedtest
+scoop bucket add AksiSpirit https://github.com/AksiSpirit/scoop-bucket
+scoop install AksiSpirit/cloudflarewarpspeedtest
 ```
 
 #### Archlinux(AUR)
@@ -38,11 +38,11 @@ paru -S cloudflarewarpspeedtest-bin
 use go tool to install(go version recommend 1.22)
 
 ```bash
-go install github.com/peanut996/CloudflareWarpSpeedTest@latest
+go install github.com/AksiSpirit/CloudflareWarpSpeedTest@latest
 ```
 
 ### Release
-go to [Releases](https://github.com/peanut996/CloudflareWarpSpeedTest/releases) page, download the pre-compiled binary file.
+go to [Releases](https://github.com/AksiSpirit/CloudflareWarpSpeedTest/releases) page, download the pre-compiled binary file.
 
 
 ## Usage
@@ -79,7 +79,3 @@ This software is released under the [GPL v3 license](LICENSE).
 
 ## Supported By
 <a href="https://jb.gg/OpenSourceSupport" target="_blank"><img src="https://resources.jetbrains.com/storage/products/company/brand/logos/jb_beam.png" height='128' style='border:0px;height:128px;' alt="JetBrains Logo (Main) logo."></a>
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=peanut996/CloudflareWarpSpeedTest&type=Date)](https://star-history.com/#peanut996/CloudflareWarpSpeedTest&Date)

@@ -6,10 +6,10 @@ import (
 	"os"
 	"time"
 
-	"github.com/peanut996/CloudflareWarpSpeedTest/i18n"
+	"github.com/AksiSpirit/CloudflareWarpSpeedTest/i18n"
 
-	"github.com/peanut996/CloudflareWarpSpeedTest/task"
-	"github.com/peanut996/CloudflareWarpSpeedTest/utils"
+	"github.com/AksiSpirit/CloudflareWarpSpeedTest/task"
+	"github.com/AksiSpirit/CloudflareWarpSpeedTest/utils"
 )
 
 var (

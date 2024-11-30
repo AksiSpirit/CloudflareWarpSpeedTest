@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/peanut996/CloudflareWarpSpeedTest/utils"
+	"github.com/AksiSpirit/CloudflareWarpSpeedTest/utils"
 )
 
 func TestUDPAddr_FullAddress(t *testing.T) {
@@ -121,7 +121,7 @@ func TestEncodeBase64ToHex(t *testing.T) {
 	}{
 		{
 			name:    "valid base64",
-			key:     warpPublicKey,  // Use the actual WARP public key which is known to be valid
+			key:     warpPublicKey, // Use the actual WARP public key which is known to be valid
 			want:    "6e65ce0be17517110c17d77288ad87e7fd5252dcc7d09b95a39d61db03df832a",
 			wantErr: false,
 		},

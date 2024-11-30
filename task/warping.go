@@ -12,17 +12,16 @@ import (
 	"net"
 	"net/netip"
 	"sort"
-	"strconv"
 	"sync"
 	"time"
 
-	"github.com/peanut996/CloudflareWarpSpeedTest/i18n"
+	"github.com/AksiSpirit/CloudflareWarpSpeedTest/i18n"
 
 	"golang.org/x/crypto/blake2s"
 	"golang.org/x/crypto/poly1305"
 	"golang.zx2c4.com/wireguard/tai64n"
 
-	"github.com/peanut996/CloudflareWarpSpeedTest/utils"
+	"github.com/AksiSpirit/CloudflareWarpSpeedTest/utils"
 
 	"golang.zx2c4.com/wireguard/conn"
 	"golang.zx2c4.com/wireguard/device"
@@ -104,7 +103,6 @@ type Warping struct {
 	ips     []*UDPAddr
 	csv     utils.PingDelaySet
 	control chan bool
-	bar     *utils.Bar
 }
 
 func NewWarping() *Warping {
@@ -116,7 +114,6 @@ func NewWarping() *Warping {
 		ips:     ips,
 		csv:     make(utils.PingDelaySet, 0),
 		control: make(chan bool, Routines),
-		bar:     utils.NewBar(len(ips), i18n.QueryI18n(i18n.Available), ""),
 	}
 }
 
@@ -139,7 +136,6 @@ func (w *Warping) Run() utils.PingDelaySet {
 		go w.start(ip)
 	}
 	w.wg.Wait()
-	w.bar.Done()
 	sort.Sort(w.csv)
 	return w.csv
 }
@@ -152,11 +148,6 @@ func (w *Warping) start(ip *UDPAddr) {
 
 func (w *Warping) warpingHandler(ip *UDPAddr) {
 	recv, totalDelay := w.warping(ip)
-	nowAble := len(w.csv)
-	if recv != 0 {
-		nowAble++
-	}
-	w.bar.Grow(1, strconv.Itoa(nowAble))
 	if recv == 0 {
 		return
 	}

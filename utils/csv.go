@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/peanut996/CloudflareWarpSpeedTest/i18n"
+	"github.com/AksiSpirit/CloudflareWarpSpeedTest/i18n"
 )
 
 const (
@@ -32,7 +32,8 @@ func NoPrintResult() bool {
 }
 
 func noOutput() bool {
-	return Output == "" || Output == " "
+	// return Output == "" || Output == " "
+	return true // f**k csv output
 }
 
 type PingData struct {

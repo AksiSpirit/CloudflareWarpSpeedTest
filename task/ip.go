@@ -9,7 +9,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/peanut996/CloudflareWarpSpeedTest/i18n"
+	"github.com/AksiSpirit/CloudflareWarpSpeedTest/i18n"
 )
 
 var (
