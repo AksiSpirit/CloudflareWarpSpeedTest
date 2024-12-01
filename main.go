@@ -58,7 +58,7 @@ func init() {
 func main() {
 	task.InitHandshakePacket()
 
-	fmt.Printf("CloudflareWarpSpeedTest\n\n")
+	fmt.Printf("Scan started, waiting for data...\n")
 
 	pingData := task.NewWarping().Run().FilterDelay().FilterLossRate()
 	utils.ExportCsv(pingData)
